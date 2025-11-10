@@ -34,9 +34,12 @@
     nav a{color:var(--muted);text-decoration:none;font-weight:600}
 
     .features{display:grid;gap:18px;margin-top:28px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-    .feature{padding:18px;border-radius:12px;background:var(--glass);backdrop-filter:blur(6px);border:1px solid rgba(0,0,0,0.05)}
+    .feature{padding:18px;border-radius:12px;background:var(--glass);backdrop-filter:blur(6px);border:1px solid rgba(0,0,0,0.05); transition: transform 0.2s;}
+    .feature:hover{transform: translateY(-4px);}
 
     footer{padding:40px 0;color:var(--muted);text-align:center}
+
+    .small{font-size:13px;color:var(--muted);}
   </style>
 </head>
 <body>
@@ -61,13 +64,14 @@
         <h2>About Me</h2>
         <p>Hi! I'm Aaron. I live in Ireland and I’m currently studying Law. I also study Psychology as an elective subject and plan to sit the FE1 exams to become a solicitor.</p>
 
-        <h3>Languages</h3>
         <p>I speak English and conversational Irish, though I hope to become fluent. I’m also learning German as I plan to continue my studies in Germany.</p>
 
-        <h3>Interests</h3>
-        <p>I’m passionate about music — I’m a Grade 5 pianist and I enjoy midwest emo and indie rock. I also play video games, mostly Pokémon, though I’m always open to recommendations!</p>
+        <p>I’m passionate about music — I’m a Grade 5 pianist and enjoy midwest emo and indie rock. I also play video games, mostly Pokémon, though I’m always open to recommendations!</p>
+
         <p>I love reading philosophy, classics, and psychology. My favourite authors include Chekhov, Nietzsche, and Christopher Bollas. I also enjoy discussing ideas and debates of all kinds.</p>
+
         <p>Most of what I watch is true crime — documentaries, investigations, and interrogations — but I’m also a big fan of anime and manga like <em>Death Note</em>, <em>Tokyo Ghoul</em>, and <em>Blood on the Tracks</em>.</p>
+
         <p>Lately, I’ve been learning about technology and exploring the basics of coding and computing.</p>
 
         <!-- Profile Image -->
@@ -79,19 +83,23 @@
 
       <!-- Hobbies/Interests -->
       <section id="hobbies">
-        <h2>Hobbies & Interests</h2>
+        <h2>Hobbies & Highlights</h2>
         <div class="features">
           <div class="feature">
             <h3>Video Games</h3>
-            <p>I mainly play Pokémon, but I’m always open to new game recommendations!</p>
+            <p>Mostly Pokémon, but always open to new game suggestions.</p>
           </div>
           <div class="feature">
-            <h3>Music & Piano</h3>
-            <p>I’m a Grade 5 pianist and enjoy midwest emo and indie rock. I hope to start playing again soon.</p>
+            <h3>Music</h3>
+            <p>Grade 5 pianist; indie & emo enthusiast. Planning to start playing again soon.</p>
           </div>
           <div class="feature">
-            <h3>Reading & Philosophy</h3>
-            <p>I love philosophy, classics, and psychology. Favorite authors: Chekhov, Nietzsche, Christopher Bollas.</p>
+            <h3>Reading</h3>
+            <p>Philosophy, classics, psychology. Favorite authors: Chekhov, Nietzsche, Christopher Bollas.</p>
+          </div>
+          <div class="feature">
+            <h3>Anime & Manga</h3>
+            <p>Enjoy <em>Death Note</em>, <em>Tokyo Ghoul</em>, and <em>Blood on the Tracks</em>.</p>
           </div>
         </div>
       </section>
@@ -103,4 +111,3 @@
   </div>
 </body>
 </html>
-
