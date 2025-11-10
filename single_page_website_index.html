@@ -1,0 +1,125 @@
+<!--
+Single-file responsive website: index.html
+Pastel green variant theme.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Company — Pastel Green Theme</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#e9f6ec;
+      --card:#ffffffcc;
+      --muted:#3b5440;
+      --accent:#a6d8a8;
+      --accent-2:#84c29b;
+      --text:#1b2b1d;
+      --glass:rgba(255,255,255,0.6);
+      --radius:16px;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background: var(--bg);
+      color:var(--text);
+      line-height:1.5;
+      padding:0 20px;
+    }
+    .container{max-width:1100px;margin:0 auto}
+    header{padding:20px 0;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--text)}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .btn{background:var(--accent);color:var(--text);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+    .nav-toggle{display:none;background:transparent;border:0;color:var(--muted)}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:36px;align-items:center;padding:40px 0}
+    .hero h1{font-size:clamp(28px,4.5vw,44px);margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 20px}
+
+    .card{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 6px 30px rgba(0,0,0,0.05)}
+    .features,.portfolio{display:grid;gap:18px;margin-top:28px}
+    .features{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+    .portfolio{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .feature,.thumb{padding:18px;border-radius:12px;background:var(--glass);backdrop-filter:blur(6px);border:1px solid rgba(0,0,0,0.05)}
+
+    footer{padding:40px 0;color:var(--muted);text-align:center}
+
+    input,textarea{background:#fff;border:1px solid rgba(0,0,0,0.1);padding:10px;border-radius:10px;color:var(--text);width:100%}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">YC</div>
+        <div>
+          <div style="font-weight:700">Your Company</div>
+          <div class="small">Design · Build · Launch</div>
+        </div>
+      </div>
+      <div>
+        <button class="nav-toggle" aria-expanded="false" id="navToggle">☰</button>
+        <nav id="mainNav">
+          <a href="#features">Features</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="btn">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Fresh ideas, clean code, and pastel vibes.</h1>
+          <p>We build elegant web experiences with a soft, natural feel — this pastel green version sets a calm tone for your brand.</p>
+          <a class="btn" href="#contact">Get a quote</a>
+        </div>
+      </section>
+
+      <section id="features">
+        <h2>Features</h2>
+        <div class="features">
+          <div class="feature"><h3>Design-first</h3><p class="small">Custom pastel palettes and minimalist layouts.</p></div>
+          <div class="feature"><h3>Responsive</h3><p class="small">Adapts beautifully across devices and screens.</p></div>
+          <div class="feature"><h3>Optimized</h3><p class="small">Fast load times and clean structure for SEO.</p></div>
+        </div>
+      </section>
+
+      <section id="work">
+        <h2>Work</h2>
+        <div class="portfolio">
+          <div class="thumb">Project A</div>
+          <div class="thumb">Project B</div>
+          <div class="thumb">Project C</div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+          <form id="contactForm" class="stack" onsubmit="return false;">
+            <label class="small">Name <input id="name" type="text" required></label>
+            <label class="small">Email <input id="email" type="email" required></label>
+            <label class="small">Message <textarea id="message" rows="4" required></textarea></label>
+            <button id="submitBtn" class="btn">Send message</button>
+            <div id="formMsg" class="small" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="small">© Your Company — Calmly built with care.</div>
+    </footer>
+  </div>
+</body>
+</html>
